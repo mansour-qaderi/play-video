@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Video Player</title>
+  </head>
+  <body>
+    <div class="btn">
+      <div class="play"></div>
+      <p class="title">play video</p>
+    </div>
+    <div class="clip">
+      // set an clip here
+      <img class="image" src="image.png" alt="image" />
+      <b class="close">close</b>
+    </div>
+    <script>
+      let btn = document.querySelector(".btn");
+      let play = document.querySelector(".play");
+      let clip = document.querySelector(".clip");
+      let close = document.querySelector(".close");
+      btn.onclick = function () {
+        clip.classList.add("active");
+        btn.classList.add("active");
+      };
+      close.onclick = function () {
+        clip.classList.remove("active");
+        btn.classList.remove("active");
+      };
+    </script>
+  </body>
+</html>
